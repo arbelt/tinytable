@@ -26,7 +26,7 @@ setMethod(
   } else if (length(x@width) == 1) {
     width <- rep(sprintf("%.2f%%", x@width / ncol(x) * 100), ncol(x))
   } else {
-    width <- sprintf("%.2f%%", x@width * 100)
+    width <- sprintf("%.2ffr", x@width)
   }
   width <- sprintf("    columns: (%s),", paste(width, collapse = ", "))
   out <- lines_insert(out, width, "tinytable table start", "after")
